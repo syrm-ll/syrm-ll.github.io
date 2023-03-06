@@ -895,7 +895,7 @@ new LambdaQueryChainWrapper<User>(userMapper)
 @EnableTransactionManagement
 public class MybatisPlusConfig {
     // 旧版: 不推荐使用
-    // @deprecated 3.4.0 please use {@link MybatisPlusInterceptor} {@link PaginationInnerInterceptor}    
+    // @deprecated 3.4.0 please use {@link MybatisPlusInterceptor} {@link PaginationInnerInterceptor}
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
