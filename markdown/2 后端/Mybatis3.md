@@ -266,7 +266,7 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 
 主要玩法:
 
-```java
+```
     // Builder / Fluent 风格
     public String insertPersonSql() {
         String sql = new SQL()
