@@ -266,7 +266,7 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 
 主要玩法:
 
-```
+```java
     // Builder / Fluent 风格
     public String insertPersonSql() {
         String sql = new SQL()
@@ -279,7 +279,7 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
 
     // 动态条件（注意参数需要使用 final 修饰，以便匿名内部类对它们进行访问）
     public String selectPersonLike(final String id, final String firstName, final String lastName) {
-        return new SQL() {{
+        return new SQL() { {
             SELECT("P.ID, P.USERNAME, P.PASSWORD, P.FIRST_NAME, P.LAST_NAME");
             FROM("PERSON P");
             if (id != null) {
@@ -292,30 +292,30 @@ https://mybatis.org/mybatis-3/zh/dynamic-sql.html
                 WHERE("P.LAST_NAME like #{lastName}");
             }
             ORDER_BY("P.LAST_NAME");
-        }}.toString();
+        } }.toString();
     }
 
     public String deletePersonSql() {
-        return new SQL() {{
+        return new SQL() { {
             DELETE_FROM("PERSON");
             WHERE("ID = #{id}");
-        }}.toString();
+        } }.toString();
     }
 
     public String insertPersonSql() {
-        return new SQL() {{
+        return new SQL() { {
             INSERT_INTO("PERSON");
             VALUES("ID, FIRST_NAME", "#{id}, #{firstName}");
             VALUES("LAST_NAME", "#{lastName}");
-        }}.toString();
+        } }.toString();
     }
 
     public String updatePersonSql() {
-        return new SQL() {{
+        return new SQL() { {
             UPDATE("PERSON");
             SET("FIRST_NAME = #{firstName}");
             WHERE("ID = #{id}");
-        }}.toString();
+        } }.toString();
     }
 ```
 
