@@ -49,17 +49,17 @@ Wed Feb 19 12:47:58 CST 2020
 
 ### JDK8日期时间API
 
-| 类名                      | 作用                                              |
-| ------------------------- | ------------------------------------------------- |
-| `java.time.LocalDate`     | 不含时区，不含时分秒的日期。                      |
-| `java.time.LocalTime`     | 不含时区，不含日期的时分秒。                      |
+| 类名                        | 作用                                 |
+|---------------------------|------------------------------------|
+| `java.time.LocalDate`     | 不含时区，不含时分秒的日期。                     |
+| `java.time.LocalTime`     | 不含时区，不含日期的时分秒。                     |
 | `java.time.LocalDateTime` | 不含时区，完整的日期时间信息。                    |
 | `java.time.Instant`       | 时间戳, 类似于`java.util.Date` 二者可以互相转换。 |
-| `java.time.MonthDay`      | 不包含年份的月 日 信息。 用来判断特殊节日。       |
+| `java.time.MonthDay`      | 不包含年份的月 日 信息。 用来判断特殊节日。            |
 
-| 格式化工具                           | 作用                           |
-| ------------------------------------ | ------------------------------ |
-| `java.time.DateTimeFormatter`        | 新的线程安全的格式化器         |
+| 格式化工具                                | 作用                |
+|--------------------------------------|-------------------|
+| `java.time.DateTimeFormatter`        | 新的线程安全的格式化器       |
 | `java.time.DateTimeFormatterBuilder` | 上面那位的进化版，更**高级**。 |
 
 
@@ -232,10 +232,10 @@ System.out.println(md.format(DateTimeFormatter.ofPattern("MM月dd日")));
 
 #### 计算日期时间差
 
-| 类型                            | 作用                                                         |
-| ------------------------------- | ------------------------------------------------------------ |
-| `java.time.Period`              | 仅包含年月日的日期计算                                       |
-| `java.time.Duration`            | 基于时间的值测量时间量                                       |
+| 类型                              | 作用                                         |
+|---------------------------------|--------------------------------------------|
+| `java.time.Period`              | 仅包含年月日的日期计算                                |
+| `java.time.Duration`            | 基于时间的值测量时间量                                |
 | `java.time.temporal.ChronoUnit` | 用于在单个时间单位内测量一段时间，这个工具类是最全的了，可以用于比较所有的时间单位。 |
 
 
@@ -317,7 +317,7 @@ AIO：异步非阻塞。
 字节流的缓冲区
 字节流缓冲区跟字符流缓冲区一样，也是为了提高效率。
 
-#### Scanner 和Readom
+#### Scanner 和 Random
 
 `java.util.Scanner`  jdk 1.5 新增加的。
 
@@ -355,23 +355,22 @@ AIO：异步非阻塞。
 
 # 网络编程
 
-| 类                    | 作用         |
-| --------------------- | ------------ |
+| 类                     | 作用     |
+|-----------------------|--------|
 | java.net.ServerSocket | 服务器套接字 |
-| java.net.InetAddress  | 网络地址     |
-| java.net.URL          | URL          |
-|                       |              |
-|                       |              |
-|                       |              |
+| java.net.InetAddress  | 网络地址   |
+| java.net.URL          | URL    |
+|                       |        |
+|                       |        |
+|                       |        |
 
 
 
 ## UDP
 
-| 类                      | 作用 |
-| ----------------------- | ---- |
-| java.net.DatagramSocket |      |
-| java.net.DatagramPacket |      |
-|                         |      |
-|                         |      |
-
+| 类                       | 作用  |
+|-------------------------|-----|
+| java.net.DatagramSocket |     |
+| java.net.DatagramPacket |     |
+|                         |     |
+|                         |     |
