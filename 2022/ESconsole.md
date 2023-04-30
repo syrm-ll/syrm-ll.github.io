@@ -1,5 +1,3 @@
-<a name="D037R"></a>
-
 # 花式输出案例
 
 > 使用 表情
@@ -43,11 +41,7 @@ console.log("%cExample %s", css, 'all code runs happy');
 
 ![image.png](img/4.png)
 
-<a name="iUj2q"></a>
-
 # 在 shell 中 (node.js)
-
-<a name="JxvMN"></a>
 
 ## 使用三方库
 
@@ -65,8 +59,6 @@ console.log('inverse the color'.inverse); // inverses the color
 console.log('OMG Rainbows!'.rainbow); // rainbow 
 console.log('Run the trap'.trap); // Drops the bass 
 ```
-
-<a name="REJJb"></a>
 
 ## 使用颜色引用
 

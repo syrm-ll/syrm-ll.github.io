@@ -1,10 +1,6 @@
-<a name="O4fW6"></a>
-
 ## 数据类型
 
-![](https://cdn.nlark.com/yuque/0/2022/jpeg/22804074/1651135817956-49c61c6a-326f-4c91-a0a3-d0949337d98d.jpeg)
-
-<a name="qsRa2"></a>
+![](img/11.jpeg)
 
 ### 整数
 
@@ -31,30 +27,20 @@ isize 和 usize 类型依赖运行程序的计算机架构：64 位架构上它�
 | Binary (二进制)        | 0b1111_0000 |
 | Byte (单字节字符)(仅限于u8) | b'A'        |
 
-<a name="PfRXq"></a>
-
 ### 浮点数
 
 | f32 | 32位 |
 |-----|-----|
 | f64 | 64位 |
 
-<a name="qLrTh"></a>
-
 ### 布尔值
 
 略
-<a name="kv3GJ"></a>
-
 ### 字符
 
 `char` 使用四个字节, 单引号, 代表一个 unicode 标量值
 
-<a name="pSlhZ"></a>
-
 ### 复合类型
-
-<a name="Pebze"></a>
 
 #### 元组
 
@@ -77,8 +63,6 @@ fn main() {
 
 > 注: 大概可以视为定长,不同类型的数组?
 
-
-<a name="Jm0aa"></a>
 
 #### 数组
 
@@ -107,8 +91,6 @@ fn main() {
 > 注: 定长, 同类型
 
 
-<a name="rzT2m"></a>
-
 ## 函数
 
 命名风格: 使用小写下划线<br />语法:
@@ -123,11 +105,7 @@ fn 函数名([参数列表]) [-> 返回值类型] {
 
 其他略
 
-<a name="D3Q2Q"></a>
-
 ## 流程控制
-
-<a name="Lmozm"></a>
 
 ### 分支
 
@@ -146,11 +124,7 @@ let num: i32 = if ok { 5 } else { 0 }
 println!(num)
 ```
 
-<a name="r7FwP"></a>
-
 ### 循环
-
-<a name="BuLaF"></a>
 
 #### loop
 
@@ -182,8 +156,6 @@ let res = loop {
 }
 ```
 
-<a name="eiQc2"></a>
-
 #### while
 
 ```rust
@@ -191,8 +163,6 @@ while 表达式 {
 
 }
 ```
-
-<a name="DopVn"></a>
 
 #### for-in
 
@@ -202,13 +172,9 @@ for item in [1, 2, 3] {
 }
 ```
 
-<a name="dsqQl"></a>
-
 # 所有权 引用借用 Slice
 
 暂略
-
-<a name="QpI2t"></a>
 
 # 结构体
 

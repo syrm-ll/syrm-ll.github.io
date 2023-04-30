@@ -1,12 +1,6 @@
-<a name="YyQEJ"></a>
-
 # 开始
 
-<a name="cgJ9Q"></a>
-
 ## 解释
-
-<a name="wHyoG"></a>
 
 ### 基础概念
 
@@ -17,17 +11,11 @@
 > 如果需要 JRE 目录, 可以执行:  `bin\jlink.exe --module-path jmods --add-modules java.desktop --output jre`
 
 
-<a name="BAHzi"></a>
-
 ### Java 平台
-
-<a name="Pem8c"></a>
 
 #### Java 1 和 Java 2
 
 1998-12 SUN 公司发布了 Java 1.2 , 在此之前的 Java 版本 称为 Java 1, 在此之后称为 Java 2
-
-<a name="zjdz5"></a>
 
 #### J2SE, J2ME, J2EE 和 Java SE, Java EE, Java ME
 
@@ -38,7 +26,7 @@ Java 5.0 版本后, J2SE J2EE J2ME 更名为 Java SE, Java EE, Java ME
 
 SE 定义 Java 语言<br />EE 定义 Java 企业开发标准规范<br />ME 是面向嵌入式设备的魔改版 (已经基本被 安卓取代)
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/22804074/1658939934885-0f84c09c-018d-4f23-991d-102c87006f31.png#averageHue=%23c3cfcc&clientId=u93be7090-24ec-4&errorMessage=unknown%20error&from=paste&height=665&id=u1b418e72&originHeight=998&originWidth=1364&originalType=binary&ratio=1&rotation=0&showTitle=false&size=151281&status=error&style=none&taskId=u996ac38c-b8c6-431d-baef-60800add665&title=&width=909.3333333333334)
+![image.png](img/9.png)
 
 **Java SE**<br />包含基础语法定义, 常用标准库, 所有内容都在 JDK 包含的标准库中, 准确定义可以参考模块化后的 标准库中 `java.se`模块.
 
@@ -105,15 +93,9 @@ jar 包 不包含在 JDK 中, 需要额外下载;
 >
 > **Java EE 8.0 之后, Java EE 更名为 **`**Jakarta EE**`**, **`**Javax.***`**的包名统一更改为 **`**jakarta.***`
 
-<a name="ZQ7cc"></a>
-
 ##  
 
-<a name="P1qXq"></a>
-
 ## 安装 JDK
-
-<a name="Litcc"></a>
 
 ### 下载
 
@@ -122,8 +104,6 @@ OracleJDK: [https://www.oracle.com/java/technologies/downloads/](https://www.ora
 GraalVM: [https://www.graalvm.org/downloads/](https://www.graalvm.org/downloads/)<br />Microsoft
 OpenJDK: [https://docs.microsoft.com/zh-cn/java/openjdk/download](https://docs.microsoft.com/zh-cn/java/openjdk/download)<br />Alibaba
 Dragonwell8: [https://github.com/alibaba/dragonwell8](https://github.com/alibaba/dragonwell8)
-
-<a name="Sx2fe"></a>
 
 ### 安装
 
@@ -134,13 +114,9 @@ Dragonwell8: [https://github.com/alibaba/dragonwell8](https://github.com/alibaba
 
 至于如何配置环境变量, 参考不同操作系统设置.
 
-<a name="R5bgS"></a>
-
 ### 验证
 
 在命令行输入 `java --version` 或 `javac --version ` 有正确输出即为环境变量配置正确
-
-<a name="DG5VF"></a>
 
 ## Hello World
 
@@ -204,8 +180,6 @@ $ ls
 Main.java
 ```
 
-<a name="mFFZm"></a>
-
 # 基础语法
 
 基础语法, 数据结构 类 C, 有略有不同
@@ -223,13 +197,9 @@ Main.java
 
 关键字, 标识符, 常量, 变量, 作用域, 语句, 操作符, 略
 
-<a name="w28DW"></a>
-
 ## 数据类型
 
-![](https://cdn.nlark.com/yuque/0/2022/jpeg/22804074/1648322117124-35e17edf-7159-4008-a101-de3aca23a535.jpeg)
-
-<a name="PEbZc"></a>
+![](img/10.jpeg)
 
 ### 基础类型
 
@@ -239,20 +209,15 @@ Main.java
 - 两种浮点型数字
 - 一个字符类型(本质上还是数字)
 - 一个 boolean 类型 表示真假
-  <a name="nHqvl"></a>
 
 ### 引用类型
 
 除了基础类型之外 都是引用类型, <br />Java 不存在 函数类型(类似 JavaScript 的那种 Function), 所有函数(方法)必须属于某个类 没有游离的函数定义<br />
 如果需要纯函数类型定义, 可以使用 JDK 1.8 提供的 `FunctionInterface` 本质上还是匿名内部类
 
-<a name="uZsNg"></a>
-
 # 流程分支语句
 
 if if-else if-elseif for while do-while 略, 同 C
-
-<a name="XZ8tQ"></a>
 
 ## switch: 多分支
 
@@ -268,8 +233,6 @@ default:
     // ......
     }
 ```
-
-<a name="qTYoN"></a>
 
 ## switch 表达式(JDK 14)
 
@@ -312,8 +275,6 @@ int result = switch (s) {
 };
 ```
 
-<a name="bs0wN"></a>
-
 ## switch 模式匹配
 
 由 JEP305 提供: [https://openjdk.java.net/jeps/305](https://openjdk.java.net/jeps/305)  switch 表达式可以用于处理多个instanceof 分支的情况, 此功能在
@@ -329,67 +290,43 @@ default           ->System.out.println("Ok");
     }
 ```
 
-<a name="XdozP"></a>
-
 # 面向对象
-
-<a name="bGJmr"></a>
 
 ## 类, 抽象类, 接口, 枚举, 注解
 
 ---
 
-<a name="jBaNd"></a>
-
 ## 继承, 实现
 
 ---
-
-<a name="AmcQq"></a>
 
 ## 重载, 重写
 
 ---
 
-<a name="YQCBq"></a>
-
 ## 初始化顺序和类加载器
 
 ---
-
-<a name="f9HiL"></a>
 
 ## 访问权限修饰符
 
 ---
 
-<a name="k5fEj"></a>
-
 ## 泛型, 异常, 可变参数, 自动装箱/拆箱 及其对方法重载/重写的影响
 
 ---
-
-<a name="BUBwv"></a>
 
 # 常用类和功能
 
 ---
 
-<a name="LNQZz"></a>
-
 ## String
 
 ---
 
-<a name="vwPKq"></a>
-
 ## 正则表达式
 
-<a name="EdC59"></a>
-
 ### 正则通用规则
-
-<a name="LOD1o"></a>
 
 #### 数量限制 (限定符)
 
@@ -400,15 +337,11 @@ default           ->System.out.println("Ok");
 - `n,` 匹配n以上
 - `m, n` 最少 m, 最多 n
 
-<a name="zAM3l"></a>
-
 #### 定位符
 
 - `^` 输入字符串开始位置 如果设置了 RegExp 对象的 Multiline 属性，^ 还会与 \n 或 \r 之后的位置匹配。
 - `$`  输入字符串结尾位置 如果设置了 RegExp 对象的 Multiline 属性，$ 还会与 \n 或 \r 之前的位置匹配。
 - `\b`  匹配单词边界 即字与空格间的位置。`\B` 非单词边界匹配。
-
-<a name="tpd1r"></a>
 
 #### 特殊字符
 
@@ -419,24 +352,16 @@ default           ->System.out.println("Ok");
 - `\` 转义
 - `|` 或
 
-> <a name="yPU06"></a>
+> ### 略
 
-### 略
-
-> <a name="bIQKz"></a>
-
-### ?=、?<=、?!、?<!
+> ### ?=、?<=、?!、?<!
 
 > _更多内容可以参考：_[正则表达式的先行断言(lookahead)和后行断言(lookbehind)](https://www.runoob.com/w3cnote/reg-lookahead-lookbehind.html)
 
 
-<a name="dxv59"></a>
-
 #### 字符区间
 
 `[任意普通字符]` 区间中任意一个<br />`[^任意普通字符]` 取反
-
-<a name="gDTNu"></a>
 
 #### 非打印字符
 
@@ -449,15 +374,11 @@ default           ->System.out.println("Ok");
 - `\t` 匹配一个制表符。等价于 \x09 和 \cI。
 - `v`  匹配一个垂直制表符。等价于 \x0b 和 \cK。
 
-<a name="juEoC"></a>
-
 ### 在Java 中使用正则
 
 > 核心就两个类:
 > `Pattern`模式 - 线程安全 代表编译后的正则表达式
 > `Matcher` 匹配器 - 线程不安全 正则的解释引擎, 使用 `Pattern` 匹配某个输入字符串后获取
-
-<a name="bVWNP"></a>
 
 ### Pattern 模式
 
@@ -466,11 +387,7 @@ default           ->System.out.println("Ok");
 > 声明: ` public final class Pattern implements java.io._Serializable_`
 
 
-<a name="tQp4P"></a>
-
 ### 常用API
-
-<a name="pWwKO"></a>
 
 #### 编译正则
 
@@ -501,8 +418,6 @@ public static Pattern compile(String regex, int flags) {
 }
 ```
 
-<a name="d6lFl"></a>
-
 #### 编译并立即匹配
 
 ```java
@@ -525,16 +440,12 @@ public static boolean matches(String regex, CharSequence input) {
 }
 ```
 
-<a name="NSyHK"></a>
-
 ### Matcher 匹配器
 
 > 模块: `java.base`
 > 全类名: `java.util.regex.Matcher`
 > 声明: `public final class Matcher implements _MatchResult_`
 
-
-<a name="w2QTk"></a>
 
 #### MatchResult 接口 匹配结果
 
@@ -543,8 +454,6 @@ java.util.regex.MatchResult#end()<br />java.util.regex.MatchResult#end(int)<br /
 java.util.regex.MatchResult#group()<br />java.util.regex.MatchResult#group(int)
 
 详细见接口文档注释
-
-<a name="OXUHJ"></a>
 
 #### 常用API
 
@@ -584,37 +493,23 @@ public void testEx() {
 ---
 
 
-<a name="AjOuy"></a>
-
 ## 基本类型包装
 
 ---
-
-<a name="r3Ja3"></a>
 
 ## 日期时间API
 
 ---
 
-<a name="sVxBp"></a>
-
 ## 集合框架
 
 ---
 
-<a name="T7lt1"></a>
-
 ## 文件和IO
-
-<a name="xHfzc"></a>
 
 ###  
 
-<a name="fmqie"></a>
-
 ### 概念
-
-<a name="ddKp4"></a>
 
 #### 同步和异步
 
@@ -622,62 +517,44 @@ public void testEx() {
 则相反，其他任务不需要等待当前调用返回，通常依靠事件、回调等机制来实现任务间次序关系<br />**同步和异步的概念：实际的I/O操作**<br />
 同步是用户线程发起I/O请求后需要等待或者轮询内核I/O操作完成后才能继续执行<br />异步是用户线程发起I/O请求后仍需要继续执行，当内核I/O操作完成后会通知用户线程，或者调用用户线程注册的回调函数
 
-<a name="YI9PP"></a>
-
 #### 阻塞和非阻塞
 
 阻塞与非阻塞：在进行**阻塞**操作时，当前线程会处于阻塞状态，无法从事其他任务，只有当条件就绪才能继续，比如ServerSocket新连接建立完毕，或者数据读取、写入操作完成；而
 **非阻塞**则是不管IO操作是否结束，直接返回，相应操作在后台继续处理<br />**阻塞和非阻塞的概念：发起I/O请求**<br />
 阻塞是指I/O操作需要彻底完成后才能返回用户空间<br />非阻塞是指I/O操作被调用后立即返回一个状态值，无需等I/O操作彻底完成
 
-<a name="WH0t4"></a>
-
 ### 标准IO: java.io 同步阻塞(BIO)
 
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/22804074/1638087194109-28f4b604-577c-4db1-940f-3309cb7e9cff.jpeg)
+![](img/5.jpeg)
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/22804074/1638091772832-bb839a4d-1b61-4237-a768-165b5e5ae048.png#clientId=u31f7c591-bad7-4&errorMessage=unknown%20error&from=paste&height=600&id=u2c0f769c&originHeight=501&originWidth=563&originalType=binary&ratio=1&rotation=0&showTitle=false&size=348286&status=error&style=none&taskId=u71d8a8f4-dcbf-4d71-a6f6-82044159c79&title=&width=674)![image.png](https://cdn.nlark.com/yuque/0/2021/png/22804074/1638091799206-b3b9fd98-0021-4063-af4d-bdeac8f40e14.png#clientId=u31f7c591-bad7-4&errorMessage=unknown%20error&from=paste&height=600&id=ubf9bc901&originHeight=407&originWidth=579&originalType=binary&ratio=1&rotation=0&showTitle=false&size=308205&status=error&style=none&taskId=u5a78db51-4eee-446d-975e-ea73a3cae03&title=&width=854)
+![image.png](img/6.png)
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/22804074/1638091591658-fb08b953-b3ac-4af4-bff1-c6a2d2759c39.png#clientId=u31f7c591-bad7-4&errorMessage=unknown%20error&from=paste&height=600&id=u456a4fc4&originHeight=392&originWidth=433&originalType=binary&ratio=1&rotation=0&showTitle=false&size=214598&status=error&style=none&taskId=u061f3be8-35e4-4c8f-83bd-5333265e271&title=&width=663)![image.png](https://cdn.nlark.com/yuque/0/2021/png/22804074/1638091700010-78726959-7182-42ac-b270-985a40f1e316.png#clientId=u31f7c591-bad7-4&errorMessage=unknown%20error&from=paste&height=600&id=u15ebaab8&originHeight=379&originWidth=392&originalType=binary&ratio=1&rotation=0&showTitle=false&size=184038&status=error&style=none&taskId=u02380540-5259-43f2-a4dd-f05a1b189bb&title=&width=621)
-
-<a name="P7VjQ"></a>
+![image.png](img/7.png)
 
 ### 新IO: java.nio 同步非阻塞(NIO)
 
-<a name="iIdoF"></a>
-
 #### 缓冲区
 
-> <a name="eSI36"></a>
-
-## 特定原始类型数据的容器。
+> ## 特定原始类型数据的容器。
 
 > 缓冲区是特定原始类型元素的线性有限序列。 除了内容之外，缓冲区的基本属性是它的容量、限制和位置：
 > 缓冲区的容量是它包含的元素数。 缓冲区的容量永远不会为负且永远不会改变。
 > 缓冲区的限制是不应读取或写入的第一个元素的索引。 缓冲区的限制永远不会为负，也永远不会大于其容量。
 > 缓冲区的位置是要读取或写入的下一个元素的索引。 缓冲区的位置永远不会为负，也永远不会大于其限制。
 > 每个非布尔基本类型都有这个类的一个子类。
-> <a name="VZlvW"></a>
-
-### 传输数据
+> ### 传输数据
 
 > 该类的每个子类都定义了两类get和put操作：
-> <a name="zIT0v"></a>
-
-### 标记和重置
+> ### 标记和重置
 
 > `缓冲区的标记是调用reset方法时其位置将重置到的索引。`
-> <a name="b2j7D"></a>
-
-### 不变量
+> ### 不变量
 
 > 以下不变量适用于标记、位置、限制和容量值：
 > 0 <=标记<=位置<=限制<=容量
 > 新创建的缓冲区始终具有零位置和未定义的标记。 初始限制可能为零，也可能是某个其他值，具体取决于缓冲区的类型及其构造方式。 新分配的缓冲区的每个元素都初始化为零。
 
-> <a name="zIa3w"></a>
-
-### 附加操作
+> ### 附加操作
 
 > 除了用于访问位置、限制和容量值以及用于标记和重置的方法之外，该类还定义了对缓冲区的以下操作：
 > - clear使缓冲区为新的通道读取或相对放置操作序列做好准备：它将容量和位置的限制设置为零。
@@ -685,15 +562,11 @@ public void testEx() {
 > - rewind使缓冲区准备好重新读取它已经包含的数据：它保持限制不变并将位置设置为零。
 > - slice和slice(index,length)方法创建缓冲区的子序列：它们保持限制和位置不变。
 > - duplicate创建缓冲区的浅拷贝：它保持限制和位置不变。
-    > <a name="mMfi5"></a>
-
-### 只读缓冲区
+    > ### 只读缓冲区
 
 > 每个缓冲区都是可读的，但并非每个缓冲区都是可写的。 每个缓冲区类的变异方法被指定为可选操作，当在只读缓冲区上调用时将抛出ReadOnlyBufferException 。
 > 只读缓冲区不允许更改其内容，但其标记、位置和限制值是可变的。 缓冲区是否为只读可以通过调用它的isReadOnly方法来确定。
-> <a name="IMv1r"></a>
-
-### 线程安全
+> ### 线程安全
 
 > 多个并发线程使用缓冲区是不安全的。 如果一个缓冲区被多个线程使用，那么对缓冲区的访问应该由适当的同步控制。
 >
@@ -707,18 +580,12 @@ private int limit;
 private int capacity;
 ```
 
-<a name="Oa4GQ"></a>
-
 #### 常用方法
 
 - **clear**() : `**position **= **0**; **limit **= **capacity**; **mark **= -**1**;` 清空(伪), 读取 或 放置之前使用
 - **flip(): **`**limit **= **position**; **position **= **0**; **mark **= -**1**;` 反转,
 
-<a name="Ev4MG"></a>
-
 ### 通道: Channel
-
-<a name="D4zlA"></a>
 
 #### 获取通道的方式
 
@@ -733,15 +600,9 @@ private int capacity;
 2. JDK 1.7 中 NIO.2 针对个个通道提供了 `open()` 方法
 3. JDK 1.7 中 NIO.2 `Files#newByteChannel()`
 
-<a name="TkM5b"></a>
-
 ### 选择器:
 
-<a name="uFB0q"></a>
-
 ### 异步非阻塞(AIO)
-
-<a name="BcKJN"></a>
 
 ### 参考资料
 
@@ -749,16 +610,10 @@ private int capacity;
 
 ---
 
-<a name="KA767"></a>
-
 ## 反射
-
-<a name="pDtjN"></a>
 
 ## 并发和线程
 
-<a name="Srmji"></a>
-
 # 国际化
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/22804074/1658941104485-69104a8d-a6fb-4fa2-8c9d-bab378627251.png#clientId=u0a692f35-3bd6-4&errorMessage=unknown%20error&from=paste&height=1007&id=ue7cad319&originHeight=1510&originWidth=2166&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1263576&status=error&style=none&taskId=ue6d107e9-f68c-47b6-b30b-fae8bc866f0&title=&width=1444)
+![image.png](img/8.png)
