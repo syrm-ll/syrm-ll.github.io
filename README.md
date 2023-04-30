@@ -1,7 +1,7 @@
 # 早期文档
 
 ![](bgi/5.jpg)
-[2020 及以前](markdown/README.md)
+[2020 及以前](2020/README.md)
 
 ---
 
